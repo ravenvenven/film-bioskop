@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genre - Movie Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="genre.html" class="active">Genre</a>
+      <a href="movies.html">Movies</a>
+      <a href="series.html">Series</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Browse by Genre</h1>
+    <p>Select a genre to explore movies and series under that category.</p>
+    
+    <!-- Container for Genre Cards -->
+    <div class="genre-container">
+      <div class="genre-card" onclick="showMovies('Action', 'Explosive scenes and high-octane adventures!')">
+        <h2>Action</h2>
+      </div>
+      <div class="genre-card" onclick="showMovies('Drama', 'Emotional stories that resonate with your heart.')">
+        <h2>Drama</h2>
+      </div>
+      <div class="genre-card" onclick="showMovies('Comedy', 'Laugh-out-loud moments to brighten your day.')">
+        <h2>Comedy</h2>
+      </div>
+      <div class="genre-card" onclick="showMovies('Sci-Fi', 'Explore futuristic worlds and mind-bending concepts.')">
+        <h2>Sci-Fi</h2>
+      </div>
+      <div class="genre-card" onclick="showMovies('Horror', 'Spine-chilling tales to keep you on edge.')">
+        <h2>Horror</h2>
+      </div>
+    </div>
+   <!-- Section to Display Movie List -->
+    <div id="movie-list" class="movie-list hidden">
+      <h2 id="genre-title"></h2>
+      <p id="genre-description"></p>
+      <div class="movie-grid">
+        <!-- Dynamic movies will load here -->
+      </div>
+      <button onclick="hideMovies()">Back to Genres</button>
+    </div>
+  </main>
+
+    
+  <script src="script.js"></script>
+</body>
+</html>
